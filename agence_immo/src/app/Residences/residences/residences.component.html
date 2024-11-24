@@ -1,0 +1,36 @@
+<div><label for="search">Search:</label><input type="text" (input)="search($event)"></div>
+<br>
+<table class="residence-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let residence of filterResidences;let i=index">
+      <td>{{residence.id}}</td>
+      <td>{{residence.name}}</td>
+      <td>
+        <div [ngSwitch]="residence.status">
+          <img *ngSwitchCase="'Disponible'" src="assets/checked.png" width="50" height="50">
+          <img *ngSwitchCase="'En Construction'" src="assets/clock.png" width="50" height="50">
+          <img *ngSwitchCase="'Vendu'" src="assets/stop.png" width="50" height="50">
+        </div>
+      </td>
+      <td>
+        <div><button (click)="buttonLocation(i)">Show Location</button>
+          <div *ngIf="showAddress[i]">{{residence.address}}</div>
+        </div>
+        <button style="margin-left: 5px;" (click)="buttonLike(residence)">like</button>
+        <button style="margin-left: 5px;" [routerLink]="['/residencedetails',residence.id]">details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  <h2>favoris:</h2>
+  <div *ngFor="let residence of favoris">
+    {{residence.name}}
+  </div>

@@ -1,0 +1,11 @@
+<div class="residence-card">
+  <h2 class="residence-title">Résidence Details</h2>
+  <div class="residence-info">
+    <p><span class="label">ID:</span> {{ residence.id }}</p>
+    <p><span class="label">Nom:</span> {{ residence.name }}</p>
+    <p><span class="label">Localisation:</span> {{ residence.address }}</p>
+    <p><span class="label">Description:</span> {{ residence.status }}</p>
+  </div>
+  <button class="next-button" (click)="nextButton(residence.id)">Next</button>
+  <button class="next-button" (click)="backButton(residence.id)">Back</button>
+</div>

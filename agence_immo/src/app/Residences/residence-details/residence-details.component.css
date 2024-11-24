@@ -1,0 +1,58 @@
+.residence-card {
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Title styling */
+.residence-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Information styling */
+.residence-info p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+/* Button styling */
+.next-button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px;
+}
+
+.next-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.next-button:active {
+  background-color: #1c5d8c;
+  transform: translateY(0);
+}

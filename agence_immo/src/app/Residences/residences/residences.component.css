@@ -1,0 +1,12 @@
+.residence-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.residence-table th, .residence-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.residence-table th {
+  background-color: #f4f4f4;
+}
